@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+<link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <div class="test">tewtsfds</div>
+
+    <ul class="fir">
+        <li>
+            <a href="javascript:;">周一</a>
+            <ul>
+                <li><a href="javascript:;">上午</a></li>
+                <li><a href="javascript:;">中午</a></li>
+                <li><a href="javascript:;">下午</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="javascript:;">周二</a>
+            <ul>
+                <li><a href="javascript:;">上午</a></li>
+                <li><a href="javascript:;">中午</a></li>
+                <li><a href="javascript:;">下午</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="javascript:;">周三</a>
+        </li>
+        <li>
+            <a href="javascript:;">周四</a>
+        </li>
+        <li>
+            <a href="javascript:;">周五</a>
+        </li>
+    </ul>
+
+    <div class="wrap">
+        <button id="btn">设置样式</button>
+        <div class="box" id="box"></div>
+        <div id="layer-wrap">
+            <div class="layer-box">
+                <div class="row row_bg" id="row_bg">
+                    <span>背景色：</span>
+                    <a href="javascript:;" data-bg="#f00">红色</a>
+                    <a href="javascript:;" data-bg="#0f0">绿色</a>
+                    <a href="javascript:;" data-bg="#00f">蓝色</a>
+                </div>
+                <div class="row" id="row_width">
+                    <span>宽度：</span>
+                    <a href="javascript:;"data-width="200px">200</a>
+                    <a href="javascript:;"data-width="300px">300</a>
+                    <a href="javascript:;"data-width="400px">400</a>
+                </div>
+                <div class="row" id="row_height">
+                    <span>高度：</span>
+                    <a href="javascript:;"data-height="200px">200</a>
+                    <a href="javascript:;"data-height="300px">300</a>
+                    <a href="javascript:;"data-height="400px">400</a>
+                </div>
+
+                <div class="opa">
+                    <a href="javascript:;" id="reset">恢复</a>
+                    <a href="javascript:;" id="sure">确定</a>
+                </div>
+            </div>
+        </div>
+    </div>
+<script>
+window.onload = function(){
+    var oLayerWrap = document.getElementById("layer-wrap"),
+        oDiv = document.getElementById("box"),
+        oBtn = document.getElementById("btn"),
+        oReset = document.getElementById("reset"),
+        oSure = document.getElementById("sure"),
+        oBgBtns = document.getElementById("row_bg").getElementsByTagName("a"),
+        oWidthBtns = document.getElementById("row_width").getElementsByTagName("a"),
+        oHeightBtns = document.getElementById("row_height").getElementsByTagName("a")
+
+    //点击设置样式按钮，展示弹框
+    oBtn.onclick = function(){
+        oLayerWrap.style.display = "block";
+    };
+
+    //点击弹框确定按钮，关闭弹框
+    oSure.onclick = function(){
+        oLayerWrap.style.display = "none";
+    };
+
+    //点击弹框恢复按钮，恢复样式
+    oReset.onclick = function(){
+        oDiv.style.width = "100px";
+        oDiv.style.height = "100px";
+        oDiv.style.backgroundColor = "#fff";
+    };
+
+    //设置背景色
+    for(var i=0; i<oBgBtns.length; i++){
+        oBgBtns[i].onclick = function(){
+            var data = this.getAttribute("data-bg");
+            oDiv.style.backgroundColor = data;
+        };
+    }
+
+    //设置宽度
+    for(var i=0; i<oWidthBtns.length; i++){
+        oWidthBtns[i].onclick = function(){
+            var data = this.getAttribute("data-width");
+            oDiv.style.width = data;
+        };
+    }
+
+    //设置背景色
+    for(var i=0; i<oHeightBtns.length; i++){
+        oHeightBtns[i].onclick = function(){
+            var data = this.getAttribute("data-height");
+            oDiv.style.height = data;
+        };
+    }
+};
+</script>
+</body>
+</html>

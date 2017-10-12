@@ -1,0 +1,126 @@
+.f-cb, .fir {
+  *zoom: 1; }
+  .f-cb:before, .f-cb:after, .fir:before, .fir:after {
+    display: table;
+    content: "";
+    font: 0/0 a; }
+  .f-cb:after, .fir:after {
+    clear: both; }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+a {
+  text-decoration: none;
+  color: #000; }
+
+ul, li {
+  list-style: none; }
+
+body {
+  line-height: 24px;
+  font-size: 14px; }
+
+.test {
+  width: 100px;
+  height: 100px;
+  font-size: 16px;
+  font-weight: 700;
+  border-style: solid;
+  border-left-width: 2px;
+  border-left-color: red;
+  border-right-width: 3px;
+  border-right-color: blue;
+  border-top-width: 0;
+  border-bottom-width: 0;
+  opacity: 0.5;
+  filter: alpha(opacity=50); }
+
+.fir {
+  background: #ccc; }
+  .fir li {
+    display: inline-block;
+    *display: inline;
+    float: left;
+    position: relative; }
+    .fir li:hover {
+      background: #f00; }
+    .fir li a {
+      display: block;
+      padding: 0 20px;
+      line-height: 30px; }
+    .fir li:hover ul {
+      height: auto; }
+  .fir ul {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    height: 0;
+    overflow: hidden;
+    background: #ff0; }
+    .fir ul li {
+      display: block;
+      float: none;
+      border-top: 1px solid #fff; }
+
+.wrap {
+  margin: 30px; }
+  .wrap button {
+    width: 80px;
+    line-height: 24px;
+    border: none;
+    color: #fff;
+    background: #369;
+    cursor: pointer; }
+  .wrap .box {
+    width: 100px;
+    height: 100px;
+    margin: 20px 0;
+    border: 1px solid #000; }
+
+#layer-wrap {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); }
+
+.layer-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  height: 200px;
+  padding: 50px;
+  margin: -150px 0 0 -200px;
+  background: rgba(255, 255, 255, 0.8); }
+  .layer-box .row {
+    line-height: 50px; }
+    .layer-box .row span {
+      color: #369; }
+    .layer-box .row a {
+      display: inline-block;
+      line-height: 30px;
+      padding: 0 10px;
+      border: 1px solid #000; }
+    .layer-box .row.row_bg a:nth-of-type(1) {
+      background: #f00; }
+    .layer-box .row.row_bg a:nth-of-type(2) {
+      background: #0f0; }
+    .layer-box .row.row_bg a:nth-of-type(3) {
+      background: #00f; }
+  .layer-box .opa {
+    margin: 30px;
+    text-align: center; }
+    .layer-box .opa a {
+      display: inline-block;
+      width: 80px;
+      line-height: 30px;
+      color: #fff;
+      background: #369;
+      margin: 0 10px; }
+
+/*# sourceMappingURL=index.css.map */
